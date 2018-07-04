@@ -1,0 +1,13 @@
+Lab 1
+https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/EmpDetailsClass.txt
+
+https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/EmpTableOperationsClass.txt
+
+https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/EmpBlobOperationsClass.txt
+
+https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/Index.txt
+
+https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/Create.txt
+
+Entire Application - https://cloudthattraining.blob.core.windows.net/cloudthattraining/EmpInformation.zip
+
