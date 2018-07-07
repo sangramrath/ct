@@ -1,4 +1,6 @@
-Lab 1
+*****
+Lab 2
+*****
 https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/EmpDetailsClass.txt
 
 https://cloudthat.blob.core.windows.net/trainingfiles/70532/storagelab/EmpTableOperationsClass.txt
