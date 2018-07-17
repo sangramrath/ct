@@ -8,7 +8,7 @@ export PATH=${HOME}/bin:${PATH}
 composer
 git clone https://github.com/GoogleCloudPlatform/php-docs-samples.git
 sudo apt-get install php7.0-zip
-cd php-docs-sample/appengine/wordpress
+cd php-docs-sample/appengine/flexible/wordpress
 composer install --no-dev
 php wordpress.php setup --dir ${HOME}/my-wordpress-project
 gcloud app deploy
