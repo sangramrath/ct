@@ -1,0 +1,24 @@
+https://s3.ap-south-1.amazonaws.com/files.cloudthat.com/EKS/amazon-eks-vpc.yaml
+
+Task 3:
+sudo apt-get update
+sudo apt install awscli
+aws configure
+curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/kubectl
+curl -o kubectl.md5 https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir bin
+cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+kubectl version --short --client
+curl -o heptio-authenticator-aws https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/heptio-authenticator-aws
+curl -o heptio-authenticator-aws.md5 https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/heptio-authenticator-aws.md5
+chmod +x ./heptio-authenticator-aws
+cp ./heptio-authenticator-aws $HOME/bin/heptio-authenticator-aws && export PATH=$HOME/bin:$PATH
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+heptio-authenticator-aws help
+
+Task 6:
+mkdir -p ~/.kube
+cd .kube
+vim config-<Cluster Name>
