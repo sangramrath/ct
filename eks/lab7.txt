@@ -21,4 +21,28 @@ heptio-authenticator-aws help
 Task 6:
 mkdir -p ~/.kube
 cd .kube
-vim config-<Cluster Name>
+vim config-<Cluster Name> #copy and paste contents of config-<clustername> file here replacing the required values
+export KUBECONFIG=$KUBECONFIG:~/.kube/config-<Cluster Name>
+kubectl get svc
+
+Task 7:
+https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/amazon-eks-nodegroup.yaml
+ 
+
+Task 8:
+curl -O https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/aws-auth-cm.yaml
+sudo vim aws-auth-cm.yaml #copy and paste contents from aws-auth-cm.yaml
+kubectl apply -f aws-auth-cm.yaml
+kubectl get nodes --watch
+
+Task 9:
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/redis-master-controller.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/redis-master-service.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/redis-slave-controller.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/redis-slave-service.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/guestbook-controller.json
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/v1.10.3/examples/guestbook-go/guestbook-service.json
+kubectl get services -o wide
+
+Task 10:
+kubectl delete rc/redis-master rc/redis-slave rc/guestbook svc/redis-master svc/redis-slave svc/guestbook
