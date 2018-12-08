@@ -7,9 +7,9 @@ composer
 #make sure it works
 
 git clone https://github.com/GoogleCloudPlatform/php-docs-samples.git
-cd php-docs-samples/appengine/wordpress
+cd php-docs-samples/appengine/flexible/wordpress
 composer install --no-dev
-php wordpress-helper.php setup -d ${HOME}/my-wordpress-project
+php wordpress.php setup --dir ${HOME}/my-wordpress-project
 
 cd ${HOME}/my-wordpress-project
 gcloud app deploy
