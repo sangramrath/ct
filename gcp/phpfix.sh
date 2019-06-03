@@ -1,4 +1,5 @@
 #!/bin/bash
+yum install subscription-manager -y
 subscription-manager repos --enable rhel-server-rhscl-7-rpms
 yum install rh-php56 rh-php56-php rh-php56-php-gd rh-php56-php-mbstring rh-php56-php-mysqlnd rh-php56-php-intl rh-php56-php-ldap
 cp /opt/rh/rh-php56/enable /etc/profile.d/rh-php56.sh source /opt/rh/rh-php56/enable
